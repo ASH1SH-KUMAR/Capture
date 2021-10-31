@@ -51,10 +51,16 @@ a{
 .card_image{
     height: 60%;
     font-size: 70px;
+    object-fit: contain;
 }
 .card_details{
     height: 20%;
     font-size: 1.4rem;
+}
+img{
+object-fit: contain;
+height: 100%;
+width: 100%;
 }
 
 .popup_window{
