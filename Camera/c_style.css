@@ -76,10 +76,7 @@ body{
     transform: scale(1.05);
     color: rgb(255, 255, 255);
 }
-.back:hover > .back_details{
-    width: 60px;
-    display: flex;
-}
+
 
 /* SLIDER */
 .filter_editor{

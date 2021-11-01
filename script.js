@@ -10,14 +10,14 @@ let popwindow = document.querySelector("#popup_window");
 let textBox = document.querySelector("#textBox");
 let enterBtn = document.querySelector(".enter");
 
-for (let i = 0; i < cards.length; i++) {
-    cards[i].addEventListener("click", function () {
-        cards[i].classList.add("activeCard");
-        setTimeout(function () {
-            cards[i].classList.remove("activeCard");
-        }, 150);
-    })
-}
+// for (let i = 0; i < cards.length; i++) {
+//     cards[i].addEventListener("click", function () {
+//         cards[i].classList.add("activeCard");
+//         setTimeout(function () {
+//             cards[i].classList.remove("activeCard");
+//         }, 150);
+//     })
+// }
 
 galleryCard.addEventListener("click", function () {
     window.location.assign("./Gallery/g_index.html")
@@ -43,7 +43,6 @@ screenRecCard.addEventListener("click", async function (e) {
                 popwindow.classList.add("show");
                 mainArea.style.opacity = 0.5;
                 popUpWindow();
-                popUpMsg();
             })
         }).catch(function (err) {
             console.log(err)
@@ -63,11 +62,6 @@ function findDate() {
     let date = new Date();
     let str = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
     return str;
-}
-
-function popUpMsg() {
-    popMsg.className = "show";
-    setTimeout(function () { popMsg.className = popMsg.className.replace("show", ""); }, 2000);
 }
 
 function popUpWindow() {

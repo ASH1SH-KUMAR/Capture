@@ -8,7 +8,6 @@ let galleryBtn = document.querySelector("#gallery");
 let zoomInBtn = document.querySelector("#zoomIn");
 let zoomOutBtn = document.querySelector("#zoomOut");
 
-let popMsg = document.querySelector("#popUpMsg");
 let popwindow = document.querySelector("#popup_window");
 let textBox = document.querySelector("#textBox");
 let enterBtn = document.querySelector(".enter");
@@ -70,7 +69,6 @@ captureBtn.addEventListener("click", function (e) {
     let y = (canvas.width/zoomLevel - canvas.height)/2;
     tool.drawImage(videoBox, x, y);
 
-    popUpMsg();
     popUpWindow("camera", canvas);
 })
 
@@ -117,10 +115,10 @@ function findDate() {
     return str;
 }
 
-function popUpMsg() {
-    popMsg.className = "show";
-    setTimeout(function () { popMsg.className = popMsg.className.replace("show", ""); }, 2000);
-}
+// function popUpMsg() {
+//     popMsg.className = "show";
+//     setTimeout(function () { popMsg.className = popMsg.className.replace("show", ""); }, 2000);
+// }
 
 function popUpWindow(type, canvas) {
     enterBtn.addEventListener("click", function () {
