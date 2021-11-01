@@ -43,7 +43,6 @@ navigator.mediaDevices.getUserMedia(constraints)
         })
         mediaRecorder.addEventListener("stop", function () {
             popwindow.classList.add("show");
-            popUpMsg();
             popUpWindow("video")
         })
     })
@@ -114,11 +113,6 @@ function findDate() {
     let str = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
     return str;
 }
-
-// function popUpMsg() {
-//     popMsg.className = "show";
-//     setTimeout(function () { popMsg.className = popMsg.className.replace("show", ""); }, 2000);
-// }
 
 function popUpWindow(type, canvas) {
     enterBtn.addEventListener("click", function () {
